@@ -6,14 +6,33 @@ class App extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      squares: [null, null, null, null, null, null, null, null, null]
+      squares: [null, null, null, null, null, null, null, null, null],
+      player1: "💥",
+      player2: "⚡️",
+      counter: 1, 
+      isActive: ['auto', 'auto', 'auto', 'auto', 'auto', 'auto', 'auto', 'auto', 'auto']
+
     }
   }
 
+
   handleGamePlay = (index) => {
-    const { squares } = this.state
-    squares[index] = "✅"
-    this.setState({squares: squares})
+    const {squares,player1,player2,counter} = this.state
+    if(counter % 2 !== 0 && counter < 10 ) {
+  
+      squares[index] = player1
+      isActive
+      let newCounter = counter + 1
+      this.setState({squares:squares, counter:newCounter})
+  
+    }else if(counter % 2 === 0 && counter < 10 ) {
+  
+    squares[index] = player2
+    let newCounter = counter + 1
+  
+    this.setState({squares:squares, counter:newCounter})
+    this.setState({squares:squares})
+    }
   }
 
   render() {
@@ -28,10 +47,14 @@ class App extends Component {
                 value={value}
                 index={index}
                 handleGamePlay={this.handleGamePlay}
+                
               />
             )
           })}
         </div>
+        <button>
+      
+    </button>
       </>
     )
   }
