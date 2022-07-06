@@ -20,11 +20,20 @@ This project will challenge your knowledge of React but should also be an exerci
     - Passed props to handleClick method on Square.js
     - Rndered handleGameplay method in App.js
 - As a user, my partner can click on a square after me and see their mark.
+    - we added player 1, player2, and a counter to state.
+    - we added conditions to handleGamePlay to alternate turns
 - As a user, I can't click on a square that has already been marked.
+    - Used the logical and in our if statement of handleGame play to stop clicking on squares that have been clicked.
 - As a user, when either my partner or I win the game (3 squares in a row: horizontally, vertically, or diagonally) I can see a notice telling me which player won.
+    -created a variable called winning set equal to the location of different winning combinations
+    - create an alert for when player1 or player 2 has the winning combination. 
+    -set state so alert pops up for winner
+
 - As a user, I can't continue playing the game after the game has been won.
 - As a user, if there are no more squares available, I can see a notice telling me that the game has ended.
 - As a user, I can click on a restart button that will clear the game board.
+    - created a reset method that returns setState back to original
+    - created a reset button and center aligned it
 
 ### 🏔 Stretch Goals
 - As a user, I can see a notification that informs me whether it is currently my partner or my turn.
