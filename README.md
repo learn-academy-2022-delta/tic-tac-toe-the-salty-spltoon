@@ -13,6 +13,12 @@ This project will challenge your knowledge of React but should also be an exerci
     - we created gameboard className in App.js and styled it in App.css
     - Mapped over this.state.squares to create the grid
 - As a user, I can click on a square to mark it.
+    - Created onclick branch
+    - Switched navigator and driver
+    - Destructured this.state.squares
+    - Created a handleGamePlay method to click on a square and display a checkmark
+    - Passed props to handleClick method on Square.js
+    - Rndered handleGameplay method in App.js
 - As a user, my partner can click on a square after me and see their mark.
 - As a user, I can't click on a square that has already been marked.
 - As a user, when either my partner or I win the game (3 squares in a row: horizontally, vertically, or diagonally) I can see a notice telling me which player won.
