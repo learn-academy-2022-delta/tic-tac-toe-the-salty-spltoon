@@ -10,6 +10,12 @@ class App extends Component {
     }
   }
 
+  handleGamePlay = (index) => {
+    const { squares } = this.state
+    squares[index] = "✅"
+    this.setState({squares: squares})
+  }
+
   render() {
     return(
       <>
@@ -21,7 +27,7 @@ class App extends Component {
                 key={index}
                 value={value}
                 index={index}
-                // handleGamePlay={this.handleGamePlay}
+                handleGamePlay={this.handleGamePlay}
               />
             )
           })}
